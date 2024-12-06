@@ -2,6 +2,7 @@ let nameError = document.getElementById('name-error');
 let phoneError = document.getElementById('phone-error');
 let emailError = document.getElementById('email-error');
 let messageError = document.getElementById('message-error');
+let submitError = document.getElementById('submit-error');
 
 
 function validateName(){ // this runs when someone fills in the full name input
@@ -76,4 +77,11 @@ function validateMessage(){ // this runs when someone fills in the message input
 
     messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'
     return true;
+}
+
+function validateForm(){
+    if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage()){
+        submitError.innerHTML = 'please fix error to submit';
+        return false;
+    }
 }
