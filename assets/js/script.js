@@ -69,15 +69,11 @@ function validateMessage(){ // this runs when someone fills in the message input
     let required = 30; // sets the minimum amount of characters
     let left = required - message.length; // shows how many characters remaining 
 
-    if(messageError == 0){
-        messageError.innerHTML = 'Enter a message'
+    if(left > 0) {
+        messageError.innerHTML = left + ' more characters required';
         return false;
     }
-    
-    if(messageError == 0){
-        messageError.innerHTML = 'Error'
-        return false;
-    }
+
     messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'
     return true;
 }
