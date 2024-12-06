@@ -1,7 +1,49 @@
 * {
     margin: 0;
     padding: 0;
-    background: #fff;
+    background-color: #d79e239c;
     box-sizing: border-box;
     font-family: 'Poppings', sans-serif;
+}
+
+.input-form{
+    background-color: #fff;
+    color: #222;
+    margin: 20px auto 0;
+    padding: 200px;
+    text-align: center;
+    display: flex;
+    flex: wrap;
+
+}
+
+.input-form label{
+    background-color: none;
+}
+
+.name{
+    background: #fff;
+    border-bottom: solid 1px gray;
+}
+
+.number {
+    background: #fff;
+}
+
+.email{
+    background: #fff;
+}
+
+.box{
+    background: #fff;
+    padding: 50px;
+}
+
+.btn{
+    background: #222;
+    color: #fff;
+    padding:10px;
+    margin: 15px;
+    border-radius: 20px;
+
 }
