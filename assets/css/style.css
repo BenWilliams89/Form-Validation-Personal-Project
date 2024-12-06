@@ -94,3 +94,7 @@ form button{
     display: block;
     margin: 30px auto 10px;
 }
+
+.input-group span i{ /* This styles the checkmark in the form validation */
+    color: seagreen;
+}

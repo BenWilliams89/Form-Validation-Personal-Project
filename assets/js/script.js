@@ -16,7 +16,7 @@ function validateName(){
         nameError.innerHTML = 'Write full name';
         return false;
     }
-    nameError.innerHTML = 'valid';
+    nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'; // places a check from fontawesome - stlee in css
     return true;
 }
 
