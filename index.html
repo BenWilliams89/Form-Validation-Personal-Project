@@ -1,25 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation</title>
+    <title>Form Validation - Easy Tutorials YouTube Channel</title>
     <link rel="stylesheet" href="assets/css/style.css">
+     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="container">
+    <form>
+      <i class="fas fa-paper-plane"></i>
+
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name">
+      </div>
+
+      <div class="input-group">
+        <label>Phone No.</label>
+        <input type="tel" placeholder="123 456 7890">
+      </div>
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input type="email" placeholder="Enter Email">
+      </div>   
+
+      <div class="input-group">
+        <label>Your Message</label>
+        <textarea rows="5" placeholder="Enter your message"></textarea>
+      </div>
+
+    <button>Submit</button>
+   
+  </form>
+
+
+ 
   
-    <div class="input-form">
-        <form>
-            <label>Full Name <input type="text" class="name" placeholder="Enter Your Name" required> </label>
-            <label>Phone No.<input type="number" class="number" placeholder="123 456 789" required></label>
-            <label>Email Id <input type="email" class="email" placeholder="Enter email" required></label>
-            <label>Your Message <input type="text-box" class="box" placeholder="Type your message here" required></label>
-        </form>
-        <button type="button" class="btn">Submit</button>
-
-    </div>
-
-
-<script src="assets/js/script.js"></script>
+  </div>
+   <script src="assets/js/script.js"></script>
 </body>
 </html>
