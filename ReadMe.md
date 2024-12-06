@@ -1,3 +1,5 @@
+![Image of the form](/assets/images/Screenshot%202024-12-06%20at%2013.27.22.png)
+
 Useful Code for future reference:
 
 - if(!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) = name does not include letters, one space and more letters (full name)
