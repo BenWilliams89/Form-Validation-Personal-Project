@@ -81,7 +81,9 @@ function validateMessage(){ // this runs when someone fills in the message input
 
 function validateForm(){
     if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage()){
+        submitError.style.display = 'block';
         submitError.innerHTML = 'please fix error to submit';
+        setTimeout(function(){submitError.style.display = 'none';}, 3000) // this makes the message dissapear after 3 seconds (3000 miliseconds)
         return false;
     }
 }
