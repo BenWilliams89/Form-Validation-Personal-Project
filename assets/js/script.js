@@ -64,12 +64,10 @@ function validateEmail(){ // this runs when someone fills in the email input
 
 
 
-
-
-
-
 function validateMessage(){ // this runs when someone fills in the message input
     let message = document.getElementById('contact-message').value;
+    let required = 30; // sets the minimum amount of characters
+    let left = required - message.length; // shows how many characters remaining 
 
     if(messageError == 0){
         messageError.innerHTML = 'Enter a message'
