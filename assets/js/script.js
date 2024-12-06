@@ -4,7 +4,7 @@ let emailError = document.getElementById('email-error');
 let messageError = document.getElementById('message-error');
 
 
-function validateName(){
+function validateName(){ // this runs when someone fills in the full name input
     let name = document.getElementById('contact-name').value;
 
     if(name.length == 0) {
@@ -22,7 +22,7 @@ function validateName(){
 
 
 
-function validatePhone(){
+function validatePhone(){ // this runs when someone fills in the number input
     let phone = document.getElementById('contact-phone').value;
 
     if(phone.length == 0){
@@ -36,10 +36,29 @@ function validatePhone(){
     }
 
     if(!phone.match(/^[0-9]{11}$/)){
-        phoneError.innerHTML = 'Phone no is required';
+        phoneError.innerHTML = 'only numbers allowed';
         return false;
     }
-    nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'
+    phoneError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'
+    return true;
+}
+
+
+
+
+function validateEmail(){ // this runs when someone fills in the email input
+    let email = document.getElementById('contact-email').value;
+
+    if(email.length == 0){
+        emailError.innerHTML = 'Email address required';
+        return false;
+    }
+
+    if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+        emailError.innerHTML = 'Email invalid';
+        return false;
+    }
+    emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'
     return true;
 }
 
@@ -49,12 +68,18 @@ function validatePhone(){
 
 
 
-function validateEmail(){
-    let email = document.getElementById('contact-email').value;
-}
-
-
-
-function validateMessage(){
+function validateMessage(){ // this runs when someone fills in the message input
     let message = document.getElementById('contact-message').value;
+
+    if(messageError == 0){
+        messageError.innerHTML = 'Enter a message'
+        return false;
+    }
+    
+    if(messageError == 0){
+        messageError.innerHTML = 'Error'
+        return false;
+    }
+    messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'
+    return true;
 }
