@@ -60,12 +60,10 @@
     right: 17px;
     font-size: 14px;
     color: red;
-    display: none;
 }
 
 #submit-error{
     color: red;
-    display: none;
 }
 
 .input-group label{
