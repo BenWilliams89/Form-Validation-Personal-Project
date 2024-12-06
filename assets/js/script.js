@@ -23,17 +23,38 @@ function validateName(){
 
 
 function validatePhone(){
-    let phone = document.getElementById('').value;
+    let phone = document.getElementById('contact-phone').value;
+
+    if(phone.length == 0){
+        phoneError.innerHTML = 'Phone number is required';
+        return false;
+    }
+
+    if(phone.length !== 11) {
+        phoneError.innerHTML = 'Phone no should be 11 digits';
+        return false;
+    }
+
+    if(!phone.match(/^[0-9]{11}$/)){
+        phoneError.innerHTML = 'Phone no is required';
+        return false;
+    }
+    nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'
+    return true;
 }
 
 
 
+
+
+
+
 function validateEmail(){
-    let email = document.getElementById('').value;
+    let email = document.getElementById('contact-email').value;
 }
 
 
 
 function validateMessage(){
-    let message = document.getElementById('').value;
+    let message = document.getElementById('contact-message').value;
 }
